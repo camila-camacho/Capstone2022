@@ -1,0 +1,300 @@
+def index():
+    return render_template("/index.html")
+
+
+def about():
+    return render_template("/about.html")
+
+
+
+def blog_list_v1():
+    return render_template("/blog-list-v1.html")
+
+
+def blog_list_v2():
+    return render_template("/blog-list-v2.html")
+
+
+def blog_list_v3():
+    return render_template("/blog-list-v3.html")
+
+
+def blog_single():
+    return render_template("/blog_single.html")
+
+
+
+def candidate_dashboard_applied_job():
+    return render_template("/candidate-dashboard-applied-job.html")
+
+
+def candidate_dashboard_cv_manager():
+    return render_template("/candidate-dashboard-cv-manager.html")
+
+
+
+def candidate_dashboard_job_alerts():
+    return render_template("/candidate-dashboard-job-alerts.html")
+
+
+def candidate_dashboard_profile():
+    return render_template("/candidate-dashboard-profile.html")
+
+
+def candidate_dashboard_resume():
+    return render_template("/candidate-dashboard-resume.html")
+
+
+def candidate_dashboard_shortlisted_resume():
+    return render_template("/candidate-dashboard-shortlisted-resume.html")
+
+
+def candidate_dashboard():
+    return render_template("/candidate-dashboard.html")
+
+
+def candidates_list_v1():
+    return render_template("/candidates-list-v1.html")
+
+def candidates_list_v2():
+    return render_template("/candidates-list-v2.html")
+
+def candidates_list_v3():
+    return render_template("/candidates-list-v3.html")
+
+def candidates_list_v4():
+    return render_template("/candidates-list-v4.html")
+
+def candidates_list_v5():
+    return render_template("/candidates-list-v5.html")
+
+def candidates_single_v1():
+    return render_template("/candidates-single-v1.html")
+
+def candidates_single_v2():
+    return render_template("/candidates-single-v2.html")
+
+def candidates_single_v3():
+    return render_template("/candidates-single-v3.html")
+
+def contact():
+    return render_template("/contact.html")
+
+
+def dashboard_applicants():
+    return render_template("/dashboard-applicants.html")
+
+
+def dashboard_change_password():
+    return render_template("/dashboard-change-password.html")
+
+def dashboard_company_profile():
+    return render_template("/dashboard-company-profile.html")
+
+def dashboard_manage_job():
+    return render_template("/dashboard-manage-job.html")
+
+def dashboard_messages():
+    return render_template("/dashboard-messages.html")
+
+def dashboard_packages():
+    return render_template("/dashboard-packages.html")
+
+def dashboard_post_job():
+    return render_template("/dashboard-post-job.html")
+
+
+def dashboard_resume_alets():
+    return render_template("/dashboard-resume-alerts.html")
+
+def dashboard_resumes():
+    return render_template("/dashboard-resumes.html")
+
+def dashboard():
+    return render_template("/dashboard.html")
+
+def elements():
+    return render_template("/elements.html")
+
+
+def employers_list_v1():
+    return render_template("/employers-list-v1.html")
+
+def employers_list_v2():
+    return render_template("/employers-list-v2.html")
+
+def employers_list_v3():
+    return render_template("/employers-list-v3.html")
+
+def employers_list_v4():
+    return render_template("/employers-list-v4.html")
+
+
+def employers_single_v1():
+    return render_template("/employers-single-v1.html")
+
+def employers_single_v2():
+    return render_template("/employers-single-v2.html")
+
+def employers_single_v3():
+    return render_template("/employers-single-v3.html")
+
+def faqs():
+    return render_template("/faqs.html")
+    
+
+
+###### 
+
+def terms():
+    return render_template("/terms.html")
+
+
+def shopping_cart():
+    return render_template("/shopping-cart.html")
+
+def shop():
+    return render_template("/shop.html")
+
+def shopping_single():
+    return render_template("/shop-single.html")
+
+
+def shopping_checkout():
+    return render_template("/shop-checkout.html")
+
+def register():
+    return render_template("/register.html")
+
+def register_popup():
+    return render_template("/register-popup.html")
+
+def pricing():
+    return render_template("/pricing.html")
+
+def order_completed():
+    return render_template("/order-completed.html")
+
+def login():
+    return render_template("/login.html")
+
+def login_popup():
+    return render_template("/login-popup.html")
+
+def job_single():
+    return render_template("/job-single.html")
+
+def job_single_5():
+    return render_template("/job-single-5.html")
+
+def job_single_4():
+    return render_template("/job-single-4.html")
+
+def job_single_3():
+    return render_template("/job-single-3.html")
+
+def job_single_2():
+    return render_template("/job-single-2.html")
+
+def job_list_v14():
+    return render_template("/job-list-v14.html")
+
+def job_list_v13():
+    return render_template("/job-list-v13.html")
+
+def job_list_v12():
+    return render_template("/job-list-v12.html")
+
+def job_list_v11():
+    return render_template("/job-list-v11.html")
+
+def job_list_v10():
+    return render_template("/job-list-v10.html")
+
+def job_list_v9():
+    return render_template("/job-list-v9.html")
+
+def job_list_v8():
+    return render_template("/job-list-v8.html")
+
+
+def job_list_v7():
+    return render_template("/job-list-v7.html")
+
+def job_list_v6():
+    return render_template("/job-list-v6.html")
+
+def job_list_v5():
+    return render_template("/job-list-v5.html")
+
+def job_list_v4():
+    return render_template("/job-list-v4.html")
+
+def job_list_v3():
+    return render_template("/job-list-v3.html")
+
+def job_list_v2():
+    return render_template("/job-list-v2.html")
+
+def job_list_v1():
+    return render_template("/job-list-v1.html")
+
+def invoice():
+    return render_template("/invoice.html")
+
+def index():
+    return render_template("/index.html")
+
+def index_17():
+    return render_template("/index-17.html")
+
+def index_16():
+    return render_template("/index-16.html")
+
+
+def index_15():
+    return render_template("/index-15.html")
+
+def index_14():
+    return render_template("/index-14.html")
+
+def index_13():
+    return render_template("/index-13.html")
+
+def index_12():
+    return render_template("/index-12.html")
+
+def index_11():
+    return render_template("/index-11.html")
+
+def index_10():
+    return render_template("/index-10.html")
+
+def index_9():
+    return render_template("/index-9.html")
+
+def index_8():
+    return render_template("/index-8.html")
+
+def index_7():
+    return render_template("/index-7.html")
+
+def index_6():
+    return render_template("/index-6.html")
+
+def index_5():
+    return render_template("/index-5.html")
+
+def index_4():
+    return render_template("/index-4.html")
+
+def index_3():
+    return render_template("/index-3.html")
+
+def index_2():
+    return render_template("/index-2.html")
+
+
+
+
+
