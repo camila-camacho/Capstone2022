@@ -298,3 +298,36 @@ def index_2():
 
 
 
+##########
+
+
+def login():
+    return render_template("/login.html")
+
+def login_popup():
+    return render_template("/login-popup.html")
+
+def job_single():
+    return render_template("/job-single.html")
+
+def job_single_2():
+    return render_template("/job-single-2.html")
+
+
+def index_17():
+    return render_template("/index-17.html")
+
+def index_10():
+    return render_template("/index-10.html")
+
+def index_8():
+    return render_template("/index-8.html")
+
+def index_7():
+    return render_template("/index-7.html")
+
+def index_6():
+    return render_template("/index-6.html")
+
+
+

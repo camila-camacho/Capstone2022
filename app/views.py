@@ -57,33 +57,9 @@ def candidate_dashboard_shortlisted_resume():
 def candidate_dashboard():
     return render_template("superio-html/candidate-dashboard.html")
 
-@app.route("/13")
-def candidates_list_v1():
-    return render_template("superio-html/candidates-list-v1.html")
-
-@app.route("/14")
-def candidates_list_v2():
-    return render_template("superio-html/candidates-list-v2.html")
-
-@app.route("/15")
-def candidates_list_v3():
-    return render_template("superio-html/candidates-list-v3.html")
-
-@app.route("/16")
-def candidates_list_v4():
-    return render_template("superio-html/candidates-list-v4.html")
-
 @app.route("/17")
 def candidates_list_v5():
     return render_template("superio-html/candidates-list-v5.html")
-
-@app.route("/18")
-def candidates_single_v1():
-    return render_template("superio-html/candidates-single-v1.html")
-
-@app.route("/19")
-def candidates_single_v2():
-    return render_template("superio-html/candidates-single-v2.html")
 
 @app.route("/20")
 def candidates_single_v3():
@@ -137,14 +113,6 @@ def dashboard():
 def elements():
     return render_template("superio-html/elements.html")
 
-@app.route("/33")
-def employers_list_v1():
-    return render_template("superio-html/employers-list-v1.html")
-
-@app.route("/34")
-def employers_list_v2():
-    return render_template("superio-html/employers-list-v2.html")
-
 @app.route("/35")
 def employers_list_v3():
     return render_template("superio-html/employers-list-v3.html")
@@ -157,47 +125,55 @@ def employers_list_v4():
 def employers_single_v1():
     return render_template("superio-html/employers-single-v1.html")
 
-@app.route("/38")
-def employers_single_v2():
-    return render_template("superio-html/employers-single-v2.html")
-
-@app.route("/39")
-def employers_single_v3():
-    return render_template("superio-html/employers-single-v3.html")
 
 @app.route("/40")
 def faqs():
     return render_template("superio-html/faqs.html")
     
-
-
-###### 
-
-def terms():
-    return render_template("superio-html/terms.html")
-
-
-def shopping_cart():
-    return render_template("superio-html/shopping-cart.html")
-
-def shop():
-    return render_template("superio-html/shop.html")
-
-def shopping_single():
-    return render_template("superio-html/shop-single.html")
-
-
-def shopping_checkout():
-    return render_template("superio-html/shop-checkout.html")
-
+@app.route("/41")
 def register():
     return render_template("superio-html/register.html")
 
+@app.route("/42")
 def register_popup():
     return render_template("superio-html/register-popup.html")
 
+@app.route("/43")
 def pricing():
     return render_template("superio-html/pricing.html")
 
-def order_completed():
-    return render_template("superio-html/order-completed.html")
+@app.route("/44")
+def login():
+    return render_template("/login.html")
+
+@app.route("/45")
+def login_popup():
+    return render_template("/login-popup.html")
+
+@app.route("/46")
+def job_single():
+    return render_template("/job-single.html")
+
+@app.route("/47")
+def job_single_2():
+    return render_template("/job-single-2.html")
+
+@app.route("/48")
+def index_17():
+    return render_template("/index-17.html")
+
+@app.route("/49")
+def index_10():
+    return render_template("/index-10.html")
+
+@app.route("/50")
+def index_8():
+    return render_template("/index-8.html")
+
+@app.route("/51")
+def index_7():
+    return render_template("/index-7.html")
+
+@app.route("/52")
+def index_6():
+    return render_template("/index-6.html")
