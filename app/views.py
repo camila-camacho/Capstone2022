@@ -154,10 +154,6 @@ def login_popup():
 def job_single():
     return render_template("superio-html/job-single.html")
 
-@app.route("/job-single-2.html")
-def job_single_2():
-    return render_template("superio-html/job-single-2.html")
-
 @app.route("/index-17.html")
 def index_17():
     return render_template("superio-html/index-17.html")
