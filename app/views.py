@@ -81,6 +81,10 @@ def dashboard_change_password():
 def dashboard_company_profile():
     return render_template("superio-html/dashboard-company-profile.html")
 
+@app.route("/dashboard-company-profile-view.html") 
+def dashboard_company_profile_view():
+    return render_template("superio-html/dashboard-company-profile-view.html")
+
 @app.route("/dashboard-manage-job.html")
 def dashboard_manage_job():
     return render_template("superio-html/dashboard-manage-job.html")
