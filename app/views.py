@@ -10,23 +10,13 @@ def index():
 def about():
     return render_template("superio-html/about.html")
 
-
-@app.route("/blog-list-v1.html") 
-def blog_list_v1():
-    return render_template("superio-html/blog-list-v1.html")
-
-@app.route("/blog-list-v2.html") 
-def blog_list_v2():
-    return render_template("superio-html/blog-list-v2.html")
-
 @app.route("/blog-list-v3.html") 
 def blog_list_v3():
     return render_template("superio-html/blog-list-v3.html")
 
-@app.route("/blog_single.html") 
+@app.route("/blog-single.html") 
 def blog_single():
-    return render_template("superio-html/blog_single.html")
-
+    return render_template("superio-html/blog-single.html")
 
 @app.route("/candidate-dashboard-applied-job.html") 
 def candidate_dashboard_applied_job():
@@ -44,6 +34,10 @@ def candidate_dashboard_job_alerts():
 @app.route("/candidate-dashboard-profile.html") 
 def candidate_dashboard_profile():
     return render_template("superio-html/candidate-dashboard-profile.html")
+
+@app.route("/dashboard-profile.html") 
+def candidate_dashboard_profile_view():
+    return render_template("superio-html/dashboard-profile.html")
 
 @app.route("/candidate-dashboard-resume.html") 
 def candidate_dashboard_resume():

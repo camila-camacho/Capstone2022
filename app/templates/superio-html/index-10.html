@@ -46,19 +46,6 @@
                   <li><a href="index-10.html">Home</a></li>
                 </li>
 
-                <li class="dropdown has-mega-menu" id="has-mega-menu">
-                  <span>Find Jobs</span>
-                  <div class="mega-menu">
-                    <div class="mega-menu-bar row">
-                      <div class="column col-lg-3 col-md-3 col-sm-12">
-                        <h3>Jobs Single</h3>
-                        <ul>
-                          <li><a href="job-single.html">Job Single v1</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </li>
 
                 <li class="dropdown">
                   <span>Employers</span>
@@ -66,21 +53,11 @@
                     <li class="dropdown">
                       <span>Employers List</span>
                       <ul>
-                        <li><a href="employers-list-v1.html">Employers LIst v1</a></li>
-                        <li><a href="employers-list-v2.html">Employers LIst v2</a></li>
-                        <li><a href="employers-list-v3.html">Employers LIst v3</a></li>
-                        <li><a href="employers-list-v4.html">Employers LIst v4</a></li>
+                        <li><a href="employers-list-v3.html">Employers List</a></li>
+                        <li><a href="employers-list-v4.html">Employers List Map</a></li>
                       </ul>
                     </li>
 
-                    <li class="dropdown">
-                      <span>Employers Single</span>
-                      <ul>
-                        <li><a href="employers-single-v1.html">Employers Single v1</a></li>
-                        <li><a href="employers-single-v2.html">Employers Single v2</a></li>
-                        <li><a href="employers-single-v3.html">Employers Single v3</a></li>
-                      </ul>
-                    </li>
                     <li><a href="dashboard.html">Employers Dashboard</a></li>
                   </ul>
                 </li>
@@ -88,60 +65,37 @@
                   <span>Candidates</span>
                   <ul>
                     <li class="dropdown">
-                      <span>Candidates List</span>
-                      <ul>
-                        <li><a href="candidates-list-v1.html">Candidates LIst v1</a></li>
-                        <li><a href="candidates-list-v2.html">Candidates LIst v2</a></li>
-                        <li><a href="candidates-list-v3.html">Candidates LIst v3</a></li>
-                        <li><a href="candidates-list-v4.html">Candidates LIst v4</a></li>
-                        <li><a href="candidates-list-v5.html">Candidates LIst v5</a></li>
-                      </ul>
+                        <li><a href="candidates-list-v5.html">Candidates List</a></li>
+                      
                     </li>
 
-                    <li class="dropdown">
-                      <span>Candidates Single</span>
-                      <ul>
-                        <li><a href="candidates-single-v1.html">Candidates Single v1</a></li>
-                        <li><a href="candidates-single-v2.html">Candidates Single v2</a></li>
-                        <li><a href="candidates-single-v3.html">Candidates Single v3</a></li>
-                      </ul>
-                    </li>
                     <li><a href="candidate-dashboard.html">Candidates Dashboard</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
-                  <span>Blog</span>
+
+
+                  <span>Test</span>
                   <ul>
-                    <li><a href="blog-list-v1.html">Blog LIst v1</a></li>
-                    <li><a href="blog-list-v2.html">Blog LIst v2</a></li>
-                    <li><a href="blog-list-v3.html">Blog LIst v3</a></li>
-                    <li><a href="blog-single.html">Blog Single</a></li>
+                    <li><a href="blog-list-v3.html">Test List</a></li>
+                    <li><a href="blog-single.html">Test Single</a></li>
                   </ul>
                 </li>
+                
+                <li class="current dropdown">
+                  <li><a href="login.html">Login</a></li>
+                </li>
 
-                <li class="dropdown">
-                  <span>Pages</span>
-                  <ul>
-                    <li class="dropdown">
-                      <span>Shop</span>
-                      <ul>
-                        <li><a href="shop.html">Shop List</a></li>
-                        <li><a href="shop-single.html">Shop Single</a></li>
-                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                        <li><a href="shop-checkout.html">Checkout</a></li>
-                        <li><a href="order-completed.html">Order Completed</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="register.html">Register</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="faqs.html">FAQ's</a></li>
-                    <li><a href="terms.html">Terms</a></li>
-                    <li><a href="invoice.html">Invoice</a></li>
-                    <li><a href="elements.html">Ui Elements</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
+                <li class="current dropdown">
+                  <li><a href="register.html">Register</a></li>
+                </li>
+
+                <li class="current dropdown">
+                  <li><a href="about.html">About</a></li>
+                </li>
+
+                <li class="current dropdown">
+                  <li><a href="contact.html">Contact</a></li>
                 </li>
 
                 <!-- Only for Mobile View -->
@@ -203,7 +157,7 @@
     <!-- Banner Section-->
     <section class="banner-section-seven">
       <div class="image-outer">
-        <figure class="image"><img src="{{url_for('static', filename='superio-html/images/homepage.jpeg')}}" alt=""></figure>
+        <figure class="image"><img src="{{url_for('static', filename='superio-html/images/homepage.jpeg')}}" width="200" height="500"alt=""></figure>
         
       </div>
       <div class="auto-container">
@@ -212,8 +166,11 @@
             <div class="inner-column">
               <div class="title-box wow fadeInUp" data-wow-delay="500ms">
                 <h3>Welcome to Happy Jobs  <br> Start a new Journey</h3>
-                <div class="text">Welcome to a new and exciting process, where we bring the best tools to find the best <br> matches between users and companies. 
-                  The experience of searching could be for not <br> easy and this is why Happy Jobs comes to offer the best match through a whole process  <br> of tests, videos, and the best advisors using internal and external data.</div>
+                <div class="text">Welcome to a new and exciting process, where we bring the 
+                  <br> best tools to find the best matches between users and companies. The 
+                  <br> experience of searching could be for not easy and this is why Happy 
+                  <br> Jobs comes to offer the best match through a whole process of tests, 
+                  <br> videos, and the best advisors using internal and external data.</div>
               </div>
 
                     <!-- Form Group -->
