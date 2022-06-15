@@ -11,6 +11,26 @@ def index():
 def about():
     return render_template("superio-html/about.html")
 
+@app.route("/personality-test.html")
+def personality_test():
+    return render_template("superio-html/personality-test.html")
+
+@app.route("/down-test.html")
+def down_test():
+    return render_template("superio-html/down-test.html")
+
+@app.route("/autism-test.html")
+def autism_test():
+    return render_template("superio-html/autism-test.html")
+
+@app.route("/blog-down.html")
+def blog_down():
+    return render_template("superio-html/blog-down.html")
+
+@app.route("/blog-autism.html")
+def blog_autism():
+    return render_template("superio-html/blog-autism.html")
+
 @app.route("/blog-list-v3.html") 
 def blog_list_v3():
     return render_template("superio-html/blog-list-v3.html")
