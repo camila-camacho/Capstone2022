@@ -13862,6 +13862,7 @@ Recruiter Section
 .recruiter-section .content-column .sec-title {
   margin-bottom: 0;
   max-width: 420px;
+  margin-left: 100px;
 }
 
 .recruiter-section .content-column .theme-btn {
