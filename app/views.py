@@ -1,10 +1,14 @@
 from app import app
-from flask import render_template
-from firebase_admin import auth
+from flask import render_template, request
+ 
+from firebase_admin import firestore, credentials, initialize_app
+ 
+db=firestore.client()
 
 
 @app.route("/") 
 def index():
+
     return render_template("superio-html/index.html")
 
 @app.route("/about.html") 
@@ -192,3 +196,47 @@ def index_7():
 @app.route("/index-6.html")
 def index_6():
     return render_template("superio-html/index-6.html")
+
+
+@app.route("/dashboard-post-job.html", methods=[ "GET","POST"])
+def test():
+    if request.method == "POST":
+      
+        title=request.form["title"]
+        jobDescription=request.form["jd"]
+        grade=request.form["grade"]
+        completeAddress=request.form["completeAddress"]
+        jobType=request.form["jobType"]
+        careerExperience=request.form["careerExperience"]
+        experience=request.form["experience"]
+        gender=request.form["gender"]
+        indrustry =request.form["industry"]
+        qualifications=request.form["qualifications"]
+        applicationDeadline=request.form["applicationDeadline"]
+        autonomousCommunities=request.form["autonomousCommunities"]
+        
+        
+        doc_ref = db.collection(u'JobPostings').document(u'1001'+title)
+        doc_ref.set({
+                u'title': title,
+                u'jobDescription': jobDescription,
+                u'grade': grade,
+                u'jobType': jobType,
+                u'careerExperience':careerExperience,
+                u'experience':experience,
+                u'gender': gender,
+                u'indrustry': indrustry,
+                u'qualifications':qualifications ,
+                u'applicationDeadline': applicationDeadline,
+                u'autonomousCommunities':autonomousCommunities,
+                u'completeAddress':completeAddress,
+                   
+        })
+        return render_template("superio-html/dashboard-post-job.html")
+    else:
+        return render_template("superio-html/dashboard-post-job.html")
+
+
+
+       
+    
