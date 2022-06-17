@@ -236,6 +236,43 @@ def test():
         return render_template("superio-html/dashboard-post-job.html")
 
 
-
-       
+@app.route("/candidate-dashboard-profile.html", methods=[ "GET","POST"])
+def test1():
+    if request.method == "POST":
+      
+        fullName=request.form["fullName"]
+        jobTitle=request.form["jobTitle"]
+        phone=request.form["phone"]
+        emailAdress=request.form["emailAdress"]
+        website=request.form["website"]
+        currentSalary=request.form["currentSalary"]
+        experience=request.form["experience"]
+        age=request.form["age"]
+        educationLevels=request.form["educationLevels"]
+        languages=request.form["languages"]
+        interestExperienceField =request.form["interestExperienceField"]
+        allowSearch=request.form["allowSearch"]
+        description=request.form["description"]
+        
+        print('camila 123456789')
+        doc_ref = db.collection(u'CandidateProfile').document(u'1001'+emailAdress)
+        doc_ref.set({
+                u'fullName': fullName,
+                u'jobTitle': jobTitle,
+                u'phone': phone,
+                u'emailAdress': emailAdress,
+                u'website':website,
+                u'currentSalary':currentSalary,
+                u'experience': experience,
+                u'age': age,
+                u'educationLevels':educationLevels ,
+                u'languages': languages,
+                u'interestExperienceField':interestExperienceField,
+                u'allowSearch':allowSearch,
+                u'description':description,  
+                   
+        })
+        return render_template("superio-html/candidate-dashboard-profile.html")
+    else:
+        return render_template("superio-html/candidate-dashboard-profile.html")
     
