@@ -27,6 +27,10 @@ def down_test():
 def autism_test():
     return render_template("superio-html/autism-test.html")
 
+@app.route("/company-test.html")
+def down_company():
+    return render_template("superio-html/company-test.html")
+
 @app.route("/blog-down.html")
 def blog_down():
     return render_template("superio-html/blog-down.html")
@@ -35,6 +39,10 @@ def blog_down():
 def blog_autism():
     return render_template("superio-html/blog-autism.html")
 
+@app.route("/blog-list-company.html")
+def blog_list_company():
+    return render_template("superio-html/blog-list-company.html")
+
 @app.route("/blog-list-v3.html") 
 def blog_list_v3():
     return render_template("superio-html/blog-list-v3.html")
@@ -42,6 +50,10 @@ def blog_list_v3():
 @app.route("/blog-single.html") 
 def blog_single():
     return render_template("superio-html/blog-single.html")
+
+@app.route("/blog-single-company.html") 
+def blog_single_company():
+    return render_template("superio-html/blog-single-company.html")
 
 @app.route("/candidate-dashboard-applied-job.html") 
 def candidate_dashboard_applied_job():
@@ -177,31 +189,17 @@ def login_popup():
 def job_single():
     return render_template("superio-html/job-single.html")
 
-@app.route("/index-17.html")
-def index_17():
-    return render_template("superio-html/index-17.html")
-
 @app.route("/index-10.html")
 def index_10():
     return render_template("superio-html/index-10.html")
 
-@app.route("/index-8.html")
-def index_8():
-    return render_template("superio-html/index-8.html")
-
-@app.route("/index-7.html") 
-def index_7():
-    return render_template("superio-html/index-7.html")
-
-@app.route("/index-6.html")
-def index_6():
-    return render_template("superio-html/index-6.html")
 
 
 @app.route("/dashboard-post-job.html", methods=[ "GET","POST"])
 def test():
     if request.method == "POST":
-      
+        
+        email=request.form["email"]
         title=request.form["title"]
         jobDescription=request.form["jd"]
         grade=request.form["grade"]
@@ -216,8 +214,9 @@ def test():
         autonomousCommunities=request.form["autonomousCommunities"]
         
         
-        doc_ref = db.collection(u'JobPostings').document(u'1001'+title)
+        doc_ref = db.collection(u'JobPostings').document(u'1001'+ email)
         doc_ref.set({
+                u'email': email,
                 u'title': title,
                 u'jobDescription': jobDescription,
                 u'grade': grade,
