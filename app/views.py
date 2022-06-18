@@ -2,6 +2,7 @@ from app import app
 from flask import render_template, request
  
 from firebase_admin import firestore, credentials, initialize_app
+
  
 db=firestore.client()
 
@@ -276,3 +277,23 @@ def test1():
     else:
         return render_template("superio-html/candidate-dashboard-profile.html")
     
+
+
+@app.route("/", methods=[ "GET","POST"])
+def regisgterUser():
+    if request.method == "POST":
+        email=request.form["email"]
+        password= request.form["password"]
+        print(email)
+        print(password)
+
+        auth.create_user(
+            email=email,
+            phone_number = '0',
+            password = password
+        )
+
+
+
+
+        return
