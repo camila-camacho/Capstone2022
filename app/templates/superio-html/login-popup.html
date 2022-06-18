@@ -6,7 +6,7 @@
       <div class="form-inner">
         <h3>Login to Happy Jobs</h3>
         <!--Login Form-->
-        <form method="post" action="add-parcel.html">
+        <form method="post" action="{{url_for('loginUser')}}" method="POST">
           <div class="form-group">
             <label>Username</label>
             <input type="text" name="username" placeholder="Username" required>

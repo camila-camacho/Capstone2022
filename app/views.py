@@ -1,7 +1,10 @@
 from app import app
 from flask import render_template, request
  
-from firebase_admin import firestore, credentials, initialize_app
+from firebase_admin import firestore, credentials, initialize_app, auth
+import pyrebase
+
+
 
  
 db=firestore.client()
@@ -280,20 +283,51 @@ def test1():
 
 
 @app.route("/", methods=[ "GET","POST"])
-def regisgterUser():
+def registerUser():
     if request.method == "POST":
         email=request.form["email"]
         password= request.form["password"]
         print(email)
         print(password)
 
-        auth.create_user(
-            email=email,
-            phone_number = '0',
-            password = password
+        user = auth.create_user(
+            email = email,
+            password = password,
+            phone_number = "+49000000000000" 
         )
 
+        # if user.phone_number == "+49000000000":
+        #     return 'return template for user'
+        # else:
+        #     return "return template for employee"
 
 
 
-        return
+
+        return '<h1>Test</h1>'
+
+
+
+@app.route("/loginUser", methods=[ "GET","POST"])
+def loginUser():
+    if request.method == "POST":
+        email=request.form["username"]
+        password=request.form["password"]
+
+        # user = pyrebase.auth().sign_in_with_email_and_password(email, password)
+
+    config = {
+    "apiKey": "AIzaSyAp6aUbBeN4jgqJ-nMP1E7L5i79oJg6MXc",
+    "authDomain": "capstone-33322.firebaseapp.com",
+    "databaseURL": "https://databaseName.firebaseio.com",
+    "storageBucket": "projectId.appspot.com",
+    "serviceAccount": "path/to/serviceAccountCredentials.json"
+    }
+    
+    firebase = pyrebase.initialize_app(config)
+        
+    firebase.auth().sign_in_with_email_and_password(email, password)
+        
+
+       
+    return '<h1>Hi</h1>'
