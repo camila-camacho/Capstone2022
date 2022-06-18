@@ -3,14 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Happy Jobs | Contact</title>
+  <title>Happy Jobs | Candidates Test List</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="{{url_for('static', filename='superio-html/css/bootstrap.css')}}">
   <link rel="stylesheet" href="{{url_for('static', filename='superio-html/css/style.css')}}">
   
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+  <link rel="shortcut icon" href="static/superio-html/images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="static/superio-html/images/favicon.png" type="image/x-icon">
 
   <!-- Responsive -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +40,8 @@
             <div class="logo-box">
               <div class="logo"><a href="/"><img src="images/logo.svg" alt="" title=""></a></div>
             </div>
-     
+
+ 
             <nav class="nav main-menu">
               <ul class="navigation" id="navbar">
                 <li class="current dropdown">
@@ -58,7 +60,6 @@
                     <li><a href="pricing.html">Packages</a></li>
                   </ul>
                 </li>
-                
                 <li class="dropdown">
                   <span>Candidates</span>
                   <ul>
@@ -80,7 +81,6 @@
                   <span>Test</span>
                   <ul>
                     <li><a href="blog-list-v3.html">Test List</a></li>
-                    <li><a href="blog-list-company.html">Companies Test List</a></li>
                   </ul>
                 </li>
                 
@@ -92,7 +92,6 @@
                 <li class="current dropdown">
                   <li><a href="contact.html">Contact</a></li>
                 </li>
-
 
                 <!-- Only for Mobile View -->
                 <li class="mm-add-listing">
@@ -149,107 +148,88 @@
     </header>
     <!--End Main Header -->
 
-
-    <!-- Map Section -->
-    <section class="map-section">
-      <div class="map-outer">
-        <div class="map-canvas" data-zoom="12" data-lat="-37.817085" data-lng="144.955631" data-type="roadmap" data-hue="#ffc400" data-title="Envato" data-icon-path="images/icons/contact-map-marker.png" data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
-        </div>
-      </div>
-    </section>
-    <!-- End Map Section -->
-
-
-    <!-- Contact Section -->
-    <section class="contact-section">
+    <!--Page Title-->
+    <section class="page-title">
       <div class="auto-container">
-        <div class="upper-box">
-          <div class="row">
-            <div class="contact-block col-lg-4 col-md-6 col-sm-12">
-              <div class="inner-box">
-                <span class="icon"><img src="static/superio-html/images/icons/placeholder.svg" alt=""></span>
-                <h4>Address</h4>
-                <p>Maria de Molina, 31Bis<br> Madrid 28006, Spain.</p>
-              </div>
-            </div>
-            <div class="contact-block col-lg-4 col-md-6 col-sm-12">
-              <div class="inner-box">
-                <span class="icon"><img src="static/superio-html/images/icons/smartphone.svg" alt=""></span>
-                <h4>Call Us</h4>
-                <p><a href="#" class="phone">123 456 7890</a></p>
-              </div>
-            </div>
-            <div class="contact-block col-lg-4 col-md-6 col-sm-12">
-              <div class="inner-box">
-                <span class="icon"><img src="static/superio-html/images/icons/letter.svg" alt=""></span>
-                <h4>Email</h4>
-                <p><a href="#">happyjobs@gmail.com</a></p>
-              </div>
-            </div>
-          </div>
+        <div class="title-outer">
+          <h1>Blog</h1>
+          <ul class="page-breadcrumb">
+            <li><a href="/">Home</a></li>
+          </ul>
         </div>
-
-
-        <!-- Contact Form -->
-        <div class="contact-form default-form">
-          <h3>Leave A Message</h3>
-          <!--Contact Form-->
-          <form method="post" action="#" id="email-form">
-            <div class="row">
-              <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                <div class="response"></div>
-              </div>
-
-              <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                <label>Your Name</label>
-                <input type="text" name="username" class="username" placeholder="Your Name*" required>
-              </div>
-
-              <div class="col-lg-6 col-md-12 col-sm-12 form-group">
-                <label>Your Email</label>
-                <input type="email" name="email" class="email" placeholder="Your Email*" required>
-              </div>
-
-              <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                <label>Subject</label>
-                <input type="text" name="subject" class="subject" placeholder="Subject *" required>
-              </div>
-
-              <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                <label>Your Message</label>
-                <textarea name="message" placeholder="Write your message..." required=""></textarea>
-              </div>
-
-              <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                <button class="theme-btn btn-style-one" type="button" id="submit" name="submit-form">Send Massage</button>
-              </div>
-            </div>
-          </form>
-        </div>
-        <!--End Contact Form -->
       </div>
     </section>
-    <!-- Contact Section -->
+    <!--End Page Title-->
 
-    <!-- Call To Action -->
-    <section class="call-to-action style-two">
+    <!-- Sidebar Page Container -->
+    <div class="sidebar-page-container">
       <div class="auto-container">
-        <div class="outer-box">
-          <div class="content-column">
-            <div class="sec-title">
-              <h2>Recruiting?</h2>
-              <div class="text">Advertise your jobs to millions of monthly users and search 15.8 million<br> CVs in our database.</div>
-              <a href="#" class="theme-btn btn-style-one bg-blue"><span class="btn-title">Start Recruiting Now</span></a>
-            </div>
-          </div>
+        <div class="row">
+          <!--Content Side-->
+          <div class="content-side col-lg-12 col-md-12 col-sm-12">
+            <div class="blog-grid">
+              <div class="row">
+                <!-- News Block -->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                  <div class="inner-box">
+                    <div class="image-box">
+                        <iframe width="420" height="315"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe>  
+                    </div>
+                    <div class="lower-content">
+                      <h3><a href="blog-single.html">Training 1</a></h3>
+                      <p class="text"> Description....</p>
+                    </div>
+                  </div>
+                </div>
 
-          <div class="image-column" style="background-image: url(images/resource/image-1.png);">
-            <figure class="image"><img src="static/superio-html/images/resource/image-1.png" alt=""></figure>
+                <!-- News Block -->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                  <div class="inner-box">
+                    <div class="image-box">
+                        <iframe width="420" height="315"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe> 
+                    </div>
+                    <div class="lower-content">
+                      <h3><a href="blog-down.html">Training 2</a></h3>
+                      <p class="text">Description....</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- News Block -->
+                <div class="news-block col-lg-4 col-md-6 col-sm-12">
+                  <div class="inner-box">
+                    <div class="image-box">
+                        <iframe width="420" height="315"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                        </iframe> 
+                    </div>
+                    <div class="lower-content">
+                      <h3><a href="blog-autism.html">Training 3</a></h3>
+                      <p class="text">Description....</p>
+                    </div>
+                  </div>
+                </div>
+
+              <!-- Pagination -->
+              <nav class="ls-pagination">
+                <ul>
+                  <li class="prev"><a href="#"><i class="fa fa-arrow-left"></i></a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#" class="current-page">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li class="next"><a href="#"><i class="fa fa-arrow-right"></i></a></li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Call To Action -->
+    </div>
+    <!-- End Sidebar Container -->
 
     <!-- Main Footer -->
     <footer class="main-footer alternate5">
@@ -259,9 +239,9 @@
           <div class="row">
             <div class="big-column col-xl-4 col-lg-3 col-md-12">
               <div class="footer-column about-widget">
-                <div class="logo"><a href="#"><img src="static/superio-html/images/logo.svg" alt=""></a></div>
+                <div class="logo"><a href="#"><img src="images/logo.svg" alt=""></a></div>
                 <p class="phone-num"><span>Call us </span><a href="thebeehost@support.com">123 456 7890</a></p>
-                <p class="address">Maria de Molina, 31Bis<br> Madrid 28006, Spain. <br><a href="mailto:support@superio.com" class="email">happyjobs@gmail.com</a></p>
+                <p class="address">329 Queensberry Street, North Melbourne VIC<br> 3051, Australia. <br><a href="mailto:support@superio.com" class="email">support@superio.com</a></p>
               </div>
             </div>
 
@@ -356,7 +336,7 @@
 
 
   </div><!-- End Page Wrapper -->
-
+    
   <script src="{{url_for('static', filename='superio-html/js/jquery.js')}}"></script>
   <script src="{{url_for('static', filename='superio-html/js/popper.min.js')}}"></script>
   <script src="{{url_for('static', filename='superio-html/js/chosen.min.js')}}"></script>
@@ -373,11 +353,7 @@
   <script src="{{url_for('static', filename='superio-html/js/wow.js')}}"></script>
   <script src="{{url_for('static', filename='superio-html/js/script.js')}}"></script>
   
-  <!--Google Map APi Key-->
-  <script src="http://maps.google.com/maps/api/js?key=AIzaSyDaaCBm4FEmgKs5cfVrh3JYue3Chj1kJMw&#038;ver=5.2.4"></script>
-  <script src="{{url_for('static', filename='superio-html/js/map-script.js')}}"></script>
-  <!--End Google Map APi-->
-  
+
 </body>
 
 </html>

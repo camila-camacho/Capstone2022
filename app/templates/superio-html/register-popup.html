@@ -7,30 +7,32 @@
         <h3>Create a Free Happy Jobs Account</h3>
 
         <!--Login Form-->
-        <form method="post" action="add-parcel.html">
+        <form action="{{url_for('register_database')}}" method="POST">
           <div class="form-group">
             <div class="btn-box row">
               <div class="col-lg-6 col-md-12">
-                <a href="#" class="theme-btn btn-style-seven"><i class="la la-user"></i> Candidate </a>
-              </div>
-              <div class="col-lg-6 col-md-12">
-                <a href="#" class="theme-btn btn-style-four"><i class="la la-briefcase"></i> Employer </a>
+                <label>Candidate or Employer</label>
+                        <select name="candidateEmployer" class="chosen-select">
+                          <option>Candidates</option>
+                          <option>Employers</option>
+
+                        </select>
               </div>
             </div>
           </div>
 
           <div class="form-group">
             <label>Email Address</label>
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="email" name="emailAddress" placeholder="Email" required>
           </div>
 
           <div class="form-group">
             <label>Password</label>
-            <input id="password-field" type="password" name="password" value="" placeholder="Password">
+            <input id="password-field" type="password" name="password" placeholder="Password">
           </div>
 
           <div class="form-group">
-            <button class="theme-btn btn-style-one " type="submit" name="Register">Register</button>
+            <button href="/"class="theme-btn btn-style-one " type="submit" name="Register">Register</button>
           </div>
         </form>
 
