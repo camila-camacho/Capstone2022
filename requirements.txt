@@ -76,6 +76,7 @@ Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
 fonttools==4.25.0
 fsspec @ file:///tmp/build/80754af9/fsspec_1632413898837/work
 future @ file:///opt/concourse/worker/volumes/live/f456638c-86a7-4060-7f5f-d499a051219b/volume/future_1607571337593/work
+gcloud==0.17.0
 gevent @ file:///opt/concourse/worker/volumes/live/014e1366-b455-480b-61a8-9a69e4909791/volume/gevent_1628273687151/work
 glob2 @ file:///home/linux1/recipes/ci/glob2_1610991677669/work
 gmpy2==2.0.8
@@ -127,6 +128,7 @@ jupyterlab @ file:///tmp/build/80754af9/jupyterlab_1635799997693/work
 jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
 jupyterlab-server @ file:///tmp/build/80754af9/jupyterlab_server_1633419203660/work
 jupyterlab-widgets @ file:///tmp/build/80754af9/jupyterlab_widgets_1609884341231/work
+jws==0.1.3
 keyring @ file:///opt/concourse/worker/volumes/live/effa77ff-08c0-456d-548e-ecd9681ace1e/volume/keyring_1629321568005/work
 kiwisolver @ file:///opt/concourse/worker/volumes/live/f8867fdb-2fa2-4145-73d9-4d6f6dad5f7c/volume/kiwisolver_1612282424136/work
 lazy-object-proxy @ file:///opt/concourse/worker/volumes/live/a169db40-97bf-4f51-6893-dc751f705b7b/volume/lazy-object-proxy_1616529067444/work
@@ -164,6 +166,7 @@ numba @ file:///Users/builder/miniconda3/envs/prefect/conda-bld/numba_1635176853
 numexpr @ file:///opt/concourse/worker/volumes/live/8a490d79-0e07-4fed-40fc-a78f896e4811/volume/numexpr_1618856522733/work
 numpy @ file:///opt/concourse/worker/volumes/live/9909a8d0-9b8e-44eb-6059-6c668078c029/volume/numpy_and_numpy_base_1626271794641/work
 numpydoc @ file:///tmp/build/80754af9/numpydoc_1605117425582/work
+oauth2client==3.0.0
 olefile @ file:///Users/ktietz/demo/mc3/conda-bld/olefile_1629805411829/work
 openpyxl @ file:///tmp/build/80754af9/openpyxl_1632777717936/work
 packaging @ file:///tmp/build/80754af9/packaging_1625611678980/work
@@ -172,6 +175,7 @@ pandocfilters @ file:///opt/concourse/worker/volumes/live/d8ef4635-066d-4ffe-534
 parso @ file:///tmp/build/80754af9/parso_1617223946239/work
 partd @ file:///tmp/build/80754af9/partd_1618000087440/work
 path @ file:///opt/concourse/worker/volumes/live/ada87e48-bd34-49ac-6489-f51a7259db05/volume/path_1623603892072/work
+pathlib==1.0.1
 pathlib2 @ file:///opt/concourse/worker/volumes/live/9cb7a8e6-768d-4b83-4c58-1af1d6394b3e/volume/pathlib2_1625585698767/work
 pathspec==0.7.0
 patsy==0.5.2
@@ -195,6 +199,7 @@ pyasn1-modules==0.2.8
 pycodestyle @ file:///tmp/build/80754af9/pycodestyle_1615748559966/work
 pycosat==0.6.3
 pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pycryptodome==3.4.3
 pycurl==7.44.1
 pydocstyle @ file:///tmp/build/80754af9/pydocstyle_1621600989141/work
 pyerfa @ file:///opt/concourse/worker/volumes/live/fef1f482-1dec-42b9-4439-b8031d24ea69/volume/pyerfa_1621560786048/work
@@ -206,10 +211,12 @@ pyls-spyder==0.4.0
 pyodbc===4.0.0-unsupported
 pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1635333100036/work
 pyparsing @ file:///tmp/build/80754af9/pyparsing_1635766073266/work
+Pyrebase==3.0.27
 pyrsistent @ file:///opt/concourse/worker/volumes/live/76cffa60-bd33-4155-4e83-ea03c38b1294/volume/pyrsistent_1636111020441/work
 PySocks @ file:///opt/concourse/worker/volumes/live/112288ac-9cb0-4e73-768b-13baf4ca6419/volume/pysocks_1605305820043/work
 pytest==6.2.4
 python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+python-jwt==2.0.1
 python-lsp-black @ file:///tmp/build/80754af9/python-lsp-black_1634232156041/work
 python-lsp-jsonrpc==1.0.0
 python-lsp-server==1.2.4
@@ -224,11 +231,14 @@ QtAwesome @ file:///tmp/build/80754af9/qtawesome_1615991616277/work
 qtconsole @ file:///tmp/build/80754af9/qtconsole_1632739723211/work
 QtPy @ file:///tmp/build/80754af9/qtpy_1629397026935/work
 regex @ file:///opt/concourse/worker/volumes/live/6d0c2188-eef5-45ba-7cde-604a70bbd9f2/volume/regex_1628063357190/work
-requests @ file:///tmp/build/80754af9/requests_1629994808627/work
+requests==2.11.1
+requests-toolbelt==0.7.0
 rope @ file:///tmp/build/80754af9/rope_1623703006312/work
 rsa==4.8
 Rtree @ file:///opt/concourse/worker/volumes/live/18283f9b-719e-45b1-7f3a-937f49358be4/volume/rtree_1618420836397/work
 ruamel-yaml-conda @ file:///opt/concourse/worker/volumes/live/e81cf0fe-611a-498e-6e69-a7320057c1ac/volume/ruamel_yaml_1616016689696/work
+ruamel.yaml==0.17.21
+ruamel.yaml.clib==0.2.6
 scikit-image==0.18.3
 scikit-learn @ file:///opt/concourse/worker/volumes/live/83f46a43-da2a-467b-5581-ed2cbd128684/volume/scikit-learn_1621370403088/work
 scikit-learn-intelex==2021.20210714.100439
