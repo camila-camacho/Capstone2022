@@ -59,6 +59,10 @@ def blog_single():
 def blog_single_company():
     return render_template("superio-html/blog-single-company.html")
 
+@app.route("/candidates-trainings.html") 
+def candidates_trainings():
+    return render_template("superio-html/candidates-trainings.html")
+
 @app.route("/candidate-dashboard-applied-job.html") 
 def candidate_dashboard_applied_job():
     return render_template("superio-html/candidate-dashboard-applied-job.html")
@@ -247,7 +251,7 @@ def test1():
         fullName=request.form["fullName"]
         jobTitle=request.form["jobTitle"]
         phone=request.form["phone"]
-        emailAdress=request.form["emailAdress"]
+        emailAddress=request.form["emailAddress"]
         website=request.form["website"]
         currentSalary=request.form["currentSalary"]
         experience=request.form["experience"]
@@ -258,13 +262,12 @@ def test1():
         allowSearch=request.form["allowSearch"]
         description=request.form["description"]
         
-        print('camila 123456789')
-        doc_ref = db.collection(u'CandidateProfile').document(u'1001'+emailAdress)
+        doc_ref = db.collection(u'CandidateProfile').document(u'1001'+emailAddress)
         doc_ref.set({
                 u'fullName': fullName,
                 u'jobTitle': jobTitle,
                 u'phone': phone,
-                u'emailAdress': emailAdress,
+                u'emailAddress': emailAddress,
                 u'website':website,
                 u'currentSalary':currentSalary,
                 u'experience': experience,
@@ -279,6 +282,7 @@ def test1():
         return render_template("superio-html/candidate-dashboard-profile.html")
     else:
         return render_template("superio-html/candidate-dashboard-profile.html")
+<<<<<<< HEAD
     
 
 
@@ -331,3 +335,27 @@ def loginUser():
 
        
     return '<h1>Hi</h1>'
+=======
+
+
+@app.route("/register-popup.html", methods=[ "GET","POST"])
+def register_database():
+    if request.method == "POST":
+      
+        candidateEmployer=request.form["candidateEmployer"]
+        emailAddress=request.form["emailAddress"]
+        password=request.form["password"]
+
+
+        doc_ref = db.collection(u'registration').document(u''+emailAddress)
+        doc_ref.set({
+                u'candidateEmployer':candidateEmployer,
+                u'emailAddress': emailAddress,
+                u'password': password,
+
+        })
+
+        return render_template("superio-html/register-popup.html")
+    else:
+        return render_template("superio-html/cregister-popup.html")
+>>>>>>> ede2c448b40776695ba05149880f5fb603b930f2
