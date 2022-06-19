@@ -74,7 +74,35 @@ def candidate_dashboard_cv_manager():
 
 @app.route("/candidate-dashboard-job-alerts.html") 
 def candidate_dashboard_job_alerts():
-    return render_template("superio-html/candidate-dashboard-job-alerts.html")
+    user = 'camila@yahoo.com'  # This would come from the logged-in user
+    user_type = 'Autism'  # This would come from the logged-in user
+    person_questions = db.collection(user_type).document(user).get().to_dict()
+    answers = []
+    for question in person_questions:
+        try:
+            answer = float(person_questions[question])
+            answers.append(answer)
+        except ValueError:
+            pass
+
+    user_score = sum(answers) / len(answers)
+
+    matches = []
+    for document in db.collection('companiestest').list_documents():
+        questions = document.get().to_dict()
+        answers = []
+        for question in questions:
+            try:
+                answer = float(questions[question])
+                answers.append(answer)
+            except ValueError:
+                pass
+        score = sum(answers) / len(answers)
+        if score - 5 < user_score < score + 5:
+            job = db.collection('JobPostings').document(questions['jobPosting']).get().to_dict()
+            matches.append({'title': job['title'], 'description': job['jobDescription']})
+
+    return render_template("superio-html/candidate-dashboard-job-alerts.html", matches=matches)
 
 @app.route("/candidate-dashboard-profile.html") 
 def candidate_dashboard_profile():
@@ -142,7 +170,37 @@ def dashboard_post_job():
 
 @app.route("/dashboard-resume-alerts.html")
 def dashboard_resume_alets():
-    return render_template("superio-html/dashboard-resume-alerts.html")
+    user = 'q3FeVRUvwHJkSVDI56Dp'  # This would come from the logged-in user
+    employee_type = 'downsyndrome'
+
+    answers = []
+    questions = db.collection('companiestest').document(user).get().to_dict()
+    for question in questions:
+        try:
+            answer = float(questions[question])
+            answers.append(answer)
+        except ValueError:
+            pass
+
+    company_score = sum(answers) / len(answers)
+    job = db.collection('JobPostings').document(questions['jobPosting']).get().to_dict()
+    title = job['title']
+    description = job['jobDescription']
+
+    matches = []
+    for document in db.collection(employee_type).list_documents():
+        questions = document.get().to_dict()
+        answers = []
+        for question in questions:
+            try:
+                answer = float(questions[question])
+                answers.append(answer)
+            except ValueError:
+                pass
+        score = sum(answers) / len(answers)
+        if score - 5 < company_score < score + 5:
+            matches.append({'employee': document.id, 'title': title, 'description': description})
+    return render_template("superio-html/dashboard-resume-alerts.html", matches=matches)
 
 @app.route("/dashboard-resumes.html")
 def dashboard_resumes():

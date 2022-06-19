@@ -225,56 +225,21 @@
                       <thead>
                         <tr>
                           <th>Title</th>
-                          <th>Alert Query</th>
-                          <th>Number Jobs</th>
-                          <th>Times</th>
+                          <th>Description</th>
+                          <th>Matched Employee</th>
                           <th>Actions</th>
                         </tr>
                       </thead>
 
                       <tbody>
-                        <tr>
-                          <td>Education</td>
-                          <td>Category: Education Training, Posted Date: All, Salary: $1000 – $3000</td>
-                          <td>Jobs found 5</td>
-                          <td>Weekly</td>
+                      {% for match in matches %}
+                          <tr>
+                          <td>{{ match.title }}</td>
+                          <td>{{ match.description }}</td>
+                          <td>{{ match.employee}}</td>
                           <td><button><i class="la la-trash colored"></i></button></td>
                         </tr>
-                        <tr>
-                          <td>Accounting and Finance</td>
-                          <td>Category: Education Training, Posted Date: All, Salary: $1000 – $3000</td>
-                          <td>Jobs found 5</td>
-                          <td>Weekly</td>
-                          <td><button><i class="la la-trash colored"></i></button></td>
-                        </tr>
-                        <tr>
-                          <td>Education</td>
-                          <td>Category: Education Training, Posted Date: All, Salary: $1000 – $3000</td>
-                          <td>Jobs found 5</td>
-                          <td>Weekly</td>
-                          <td><button><i class="la la-trash colored"></i></button></td>
-                        </tr>
-                        <tr>
-                          <td>Accounting and Finance</td>
-                          <td>Category: Education Training, Posted Date: All, Salary: $1000 – $3000</td>
-                          <td>Jobs found 5</td>
-                          <td>Weekly</td>
-                          <td><button><i class="la la-trash colored"></i></button></td>
-                        </tr>
-                        <tr>
-                          <td>Education</td>
-                          <td>Category: Education Training, Posted Date: All, Salary: $1000 – $3000</td>
-                          <td>Jobs found 5</td>
-                          <td>Weekly</td>
-                          <td><button><i class="la la-trash colored"></i></button></td>
-                        </tr>
-                        <tr>
-                          <td>Accounting and Finance</td>
-                          <td>Category: Education Training, Posted Date: All, Salary: $1000 – $3000</td>
-                          <td>Jobs found 5</td>
-                          <td>Weekly</td>
-                          <td><button><i class="la la-trash colored"></i></button></td>
-                        </tr>
+                      {% endfor %}
                       </tbody>
                     </table>
                   </div>
