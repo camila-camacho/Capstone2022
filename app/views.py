@@ -282,8 +282,9 @@ def test1():
         return render_template("superio-html/candidate-dashboard-profile.html")
     else:
         return render_template("superio-html/candidate-dashboard-profile.html")
-<<<<<<< HEAD
-    
+
+
+
 
 
 @app.route("/", methods=[ "GET","POST"])
@@ -335,7 +336,6 @@ def loginUser():
 
        
     return '<h1>Hi</h1>'
-=======
 
 
 @app.route("/register-popup.html", methods=[ "GET","POST"])
@@ -358,4 +358,4 @@ def register_database():
         return render_template("superio-html/register-popup.html")
     else:
         return render_template("superio-html/cregister-popup.html")
->>>>>>> ede2c448b40776695ba05149880f5fb603b930f2
+
