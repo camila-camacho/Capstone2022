@@ -259,6 +259,10 @@ def job_single():
 def index_10():
     return render_template("superio-html/index-10.html")
 
+@app.route("/reservation.html")
+def reservation():
+    return render_template("superio-html/reservation.html")
+
 
 
 @app.route("/dashboard-post-job.html", methods=[ "GET","POST"])
@@ -345,56 +349,107 @@ def test1():
 
 
 
-@app.route("/", methods=[ "GET","POST"])
+# @app.route("/", methods=[ "GET","POST"])
+# def registerUser():
+#     if request.method == "POST":
+#         email=request.form["email"]
+#         password= request.form["password"]
+#         print(email)
+#         print(password)
+#
+#         user = auth.create_user(
+#             email = email,
+#             password = password,
+#             phone_number = "+49000000000000"
+#         )
+#
+#         # if user.phone_number == "+49000000000":
+#         #     return 'return template for user'
+#         # else:
+#         #     return "return template for employee"
+#
+#
+#
+#
+#         return '<h1>Test</h1>'
+
+
+@app.route("/", methods=["GET", "POST"])
 def registerUser():
     if request.method == "POST":
-        email=request.form["email"]
-        password= request.form["password"]
+        email = request.form["email"]
+        password = request.form["password"]
         print(email)
         print(password)
 
         user = auth.create_user(
-            email = email,
-            password = password,
-            phone_number = "+49000000000000" 
+            email=email,
+            password=password,
+            phone_number="+49000000000000"
         )
 
-        # if user.phone_number == "+49000000000":
-        #     return 'return template for user'
-        # else:
-        #     return "return template for employee"
-
-
-
+        if user.phone_number == "+49000000000":
+            return 'return template for user'
+        else:
+            return "return template for employee"
 
         return '<h1>Test</h1>'
 
 
-
-@app.route("/loginUser", methods=[ "GET","POST"])
+@app.route("/loginUser", methods=["GET", "POST"])
 def loginUser():
     if request.method == "POST":
-        email=request.form["username"]
-        password=request.form["password"]
+        email = request.form["username"]
+        password = request.form["password"]
 
-        # user = pyrebase.auth().sign_in_with_email_and_password(email, password)
+        user = auth.sign_in_with_email_and_password(email, password)
 
-    config = {
-    "apiKey": "AIzaSyAp6aUbBeN4jgqJ-nMP1E7L5i79oJg6MXc",
-    "authDomain": "capstone-33322.firebaseapp.com",
-    "databaseURL": "https://databaseName.firebaseio.com",
-    "storageBucket": "projectId.appspot.com",
-    "serviceAccount": "path/to/serviceAccountCredentials.json"
-    }
-    
-    firebase = pyrebase.initialize_app(config)
-        
-    firebase.auth().sign_in_with_email_and_password(email, password)
-        
+        print("signed in user")
 
-       
+    #    user = auth.sign_in_with_email_and_password(email,password)
+    #    auth.sign_in_with_email_and_password(email, password)
+
     return '<h1>Hi</h1>'
 
+
+firebaseConfig = {
+  "apiKey": "AIzaSyAp6aUbBeN4jgqJ-nMP1E7L5i79oJg6MXc",
+  "authDomain": "capstone-33322.firebaseapp.com",
+  "databaseURL": "https://capstone-33322-default-rtdb.europe-west1.firebasedatabase.app",
+  "projectId": "capstone-33322",
+  "storageBucket": "capstone-33322.appspot.com",
+  "messagingSenderId": "180237052934",
+  "appId": "1:180237052934:web:41673674175839f814e787",
+  "databaseURL": " "
+}
+
+firebase = pyrebase.initialize_app(firebaseConfig)
+auth = firebase.auth()
+
+
+# @app.route("/loginUser", methods=[ "GET","POST"])
+# def loginUser():
+#     if request.method == "POST":
+#         email=request.form["username"]
+#         password=request.form["password"]
+#
+#         # user = pyrebase.auth().sign_in_with_email_and_password(email, password)
+#
+#     config = {
+#     "apiKey": "AIzaSyAp6aUbBeN4jgqJ-nMP1E7L5i79oJg6MXc",
+#     "authDomain": "capstone-33322.firebaseapp.com",
+#     "databaseURL": "https://databaseName.firebaseio.com",
+#     "storageBucket": "projectId.appspot.com",
+#     "serviceAccount": "path/to/serviceAccountCredentials.json"
+#     }
+#
+#     firebase = pyrebase.initialize_app(config)
+#
+#     firebase.auth().sign_in_with_email_and_password(email, password)
+#
+#
+#
+#     return '<h1>Hi</h1>'
 
 @app.route("/register-popup.html", methods=[ "GET","POST"])
 def register_database():
